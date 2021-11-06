@@ -1,0 +1,31 @@
+{
+    "name": "web1ac1",
+    "version": "0.0.1",
+    "description": "Ac1",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prehtml-minifier": "rm -rf dist",
+        "build": " npm run html-minifier & npx check-html-links",
+        "html-minifier": "html-minifier --input-dir src --output-dir dist --file-ext html --remove-comments --collapse-whitespace --minify-js true --minify-css true"
+    },
+    "keywords": [
+        "node",
+        "AC1",
+        "apple",
+        "html"
+    ],
+    "author": "Mario Rodriguez",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "npm": "^8.1.0",
+        "run": "^1.4.0"
+    },
+    "devDependencies": {
+        "check-html-links": "^0.2.3",
+        "html-minifier": "^4.0.0",
+        "parcel-bundler": "^1.6.1"
+    }
+}
